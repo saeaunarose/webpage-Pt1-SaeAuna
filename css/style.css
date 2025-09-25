@@ -138,4 +138,8 @@ footer {
   border-left: 6px solid blue;
   padding-left: 0.5rem;
 }
-
+@media (max-width: 900px) {
+  .two-col { flex-direction: column; }
+  .card { flex: 1 1 100%; }
+  h1 { font-size: 1.8rem; }
+}
