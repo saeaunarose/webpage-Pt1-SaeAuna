@@ -98,3 +98,80 @@ footer {
   .card { flex: 1 1 100%; }
   h1 { font-size: 1.8rem; }
 }
+/* ====== Step 9: Custom Theme & Styles (yours, not Bootstrap) ====== */
+
+/* Theme tokens */
+:root{
+  --trail-green-700:#2e563f;
+  --trail-green-600:#2f6a46;
+  --trail-sky-500:#0ea5e9;
+  --trail-border:#e5e7eb;
+  --trail-card-bg:#ffffff;
+  --trail-soft-bg:#f6fff9;
+}
+
+/* Fonts (use if you added the Google Fonts link) */
+body{ font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+h1,h2,h3{ font-family: "Merriweather", Georgia, serif; letter-spacing:.3px; }
+
+/* Make headings feel “outdoorsy” */
+h1{ color:var(--trail-green-700); }
+h2,h3{ color:#2b3a2f; }
+
+/* Reusable section wrapper so each block feels like a card */
+.section-card{
+  background: var(--trail-card-bg);
+  border: 1px solid var(--trail-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  margin-bottom: 1.25rem;
+}
+
+/* Accent left borders you already liked */
+#why.section-card        { border-left: 6px solid var(--trail-green-700); }
+#highlights.section-card { border-left: 6px solid var(--trail-sky-500); }
+#plan.section-card       { border-left: 6px solid #f59e0b; } /* amber */
+#scenery.section-card    { border-left: 6px solid #ef4444; } /* red */
+
+/* Custom button flavor on top of Bootstrap */
+.btn-trail{
+  background-color: var(--trail-green-700);
+  border-color: var(--trail-green-700);
+}
+.btn-trail:hover,
+.btn-trail:focus{
+  background-color: var(--trail-green-600);
+  border-color: var(--trail-green-600);
+}
+
+/* Image frame + caption */
+.img-frame{
+  border:1px solid var(--trail-border);
+  border-radius:12px;
+  padding:6px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.07);
+}
+.img-caption{
+  display:block;
+  color:#6b7280;
+  font-size:.9rem;
+  margin-top:.35rem;
+}
+
+/* Lists: keep normal bullets tidy */
+ul{ list-style:disc; list-style-position:outside; margin-left:1.25rem; padding-left:0; }
+li{ margin-bottom:.45rem; }
+
+/* Make the collapsible Tips card feel special */
+#extraTips .card{
+  border-left:4px solid var(--trail-green-700);
+  background: var(--trail-soft-bg);
+}
+
+/* Small-screen polish */
+@media (max-width: 600px){
+  .section-card{ padding:.9rem 1rem; }
+  h1{ font-size: clamp(1.6rem, 7vw, 2rem); }
+}
