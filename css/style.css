@@ -24,30 +24,6 @@ a:hover { text-decoration: underline; }
 h1, h2, h3 { margin: 0.25rem 0 0.6rem; }
 p, ul, ol { margin: 0 0 0.9rem; }
 
-/* =============== Layout Container =============== */
-/* Wrap your page sections with <div class="container"> */
-.container {
-  max-width: 960px;         /* nice readable column width */
-  margin: 0 auto;           /* centers the column */
-  padding: 16px 20px;       /* breathing room inside */
-  background: transparent;  /* keep page background visible */
-}
-
-/* =============== Header & Navigation =============== */
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-/* Put .container directly inside <header> for centering */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;  /* logo + menu stay together on the left */
-  gap: 16px;
-  flex-wrap: wrap;              /* wrap on small screens */
-}
-
 .nav__brand { font-weight: 700; }
 
 .nav__menu {
@@ -71,39 +47,18 @@ main { /* keep main simple; .container handles width */ }
   background: #eef2ff;
   color: #3730a3;
 }
-.btn {
-  display: inline-block;
-  padding: 0.6rem 0.9rem;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-}
-.btn:hover { background: #f3f4f6; }
-
-/* Optional: simple card layout (Flexbox) */
+/* simple card layout (Flexbox) */
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin: 1rem 0 1.25rem;
 }
-.card {
-  flex: 1 1 280px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,.05);
-}
 
-/* =============== Footer =============== */
 footer {
-  border-top: 1px solid #e5e7eb;
-  background: #ffffff;
-  color: #6b7280;
   font-size: 0.95rem;
   padding: 1rem 0;
 }
-
 /* =============== Small Screens =============== */
 @media (max-width: 600px) {
   .container { padding: 12px 14px; }
